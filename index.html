@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        /* GOOGLE FONT LATO */
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap');
+
+        :root {
+            --black: #000;
+            --navy: #212d69;
+            --white: #fff;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lato', sans-serif;
+        }
+        body{
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .headInfo{
+            padding-bottom: 15px;
+            border-bottom: 4px solid var(--navy);
+        }
+        .invoiceTitle{
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            text-decoration: underline;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        .headContent{
+            display: flex;
+            margin-top: 10px;
+            justify-content: space-between;
+        }
+        .headContent img{
+            width: 120px;
+            height: 100px;
+            margin-left: 20px;
+        }
+        .headContent .invoiceInfo{
+            margin-right: 20px;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-weight: 300;
+            background-color: var(--navy);
+            color: var(--white);
+            box-sizing: border-box;
+            padding-left: 10px;
+        }
+        .invoiceBody{
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 15px;
+            border-bottom: 4px solid var(--navy);
+        }
+        .invoiceBody .shopOwner{
+            padding-left: 15px;
+        }
+        .invoiceBody .customerInfo{
+            width: 600px;
+        }
+        .productInfo{
+            margin-top: 10px;
+        }
+        .productInfo h4{
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .productInfo table{
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .productInfo table th{
+            border: 2px solid var(--navy);
+            text-align: center;
+            padding: 8px;
+            color: var(--white);
+            background-color: var(--navy);
+        } 
+        .productInfo table td{
+            border: 2px solid var(--navy);
+            text-align: center;
+            padding: 8px;
+        }
+        .calculation{
+            width: 100%;
+            margin-top: 2px;
+            padding-right: 10px;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: end;
+        }
+        .calculation table{
+            width: 300px;
+            border-collapse: collapse;
+        }
+        .calculation table tr{
+            border: 2px solid var(--navy);
+            text-align: center;
+            padding: 8px;
+            width: 50%;
+        }
+        .calculation table tr .tag{
+            background-color: var(--navy); 
+            color: var(--white); 
+            border-bottom-color: var(--white);
+        }
+        .footerSec{
+            width: 100%;
+            margin-top: 10px;
+            height: 250px;
+        }
+        .footerSec .sigSec{
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+        .footerSec .customerSig{
+            width: 30%;
+            text-align: center;
+            padding-top: 120px;
+        }
+        .footerSec .shopSig{
+            width: 30%;
+            text-align: center;
+            padding-top: 120px;
+        }
+        .footerSec .noteSec{
+            margin: 10px 0 0 18px ;
+        }
+        @media print{
+            .invoiceBody .customerInfo{
+            margin-left: 10px;}
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <section class="headInfo">
+        <div class="invoiceTitle">Sales Invoice</div>
+        <div class="headContent">
+            <img src="./logo/IT PARK.png" alt="logo">
+            <div class="invoiceInfo">
+                <h3>Invoice ID:4120</h3>
+                <h4>Date:01/03/22</h4>
+                <h4>Time:14:27</h4>
+            </div>
+        </div>
+    </section>
+    <!-- Body -->
+    <section class="invoiceBody">
+        <div class="shopOwner">
+            <h4>IT PARK</h4>
+            <h4>3/7,8 Jalil Tower,</h4>
+            <h4>77, Lower Jessore Road, Khulna 9100</h4>
+            <h4>Phone: 01914652063</h4>
+        </div>
+        <div class="customerInfo">
+            <h3 style="color: var(--navy);">Invoice  To</h3>
+            <h4>ABC</h4>
+            <h4>XYZ</h4>
+            <h4>Phone:123</h4>
+        </div>
+    </section>
+    <section class="productInfo">
+        <h4>Product Details</h4>
+        <table>
+            <tr>
+                <th>Sl.</th>
+                <th>Product Name</th>
+                <th>IMEI</th>
+                <th>Warranty</th>
+                <th>Qty</th>
+                <th>Unit Price</th>
+                <th>Sub. Total</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>PENDRIVE ADATE 64GB (3159S1)</td>
+                <td>5012</td>
+                <td>5 YEARS</td>
+                <td>1</td>
+                <td>700</td>
+                <td>700</td>
+            </tr>
+        </table>
+        <div class="calculation">
+            <table>
+                <tr>
+                    <td class="tag">Sub. Total</td>
+                    <td>700 Tk</td>
+                </tr>
+                <tr>
+                    <td class="tag">Previous Due</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tag">Total</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tag">Paid</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tag">Return</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tag" style="border: none;">Balance</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td>IN WORDS</td>
+                    <td>SEVEN HUNDREDS TAKA ONLY</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <section class="footerSec">
+        <div class="sigSec">
+            <div class="customerSig">
+                <h5>Signature</h5>
+                <h5>Customer</h5>
+            </div>
+            <div class="shopSig">
+                <h5>Signature</h5>
+                <h5>Authorised by</h5>
+                <h5>It Park</h5>
+            </div>
+        </div>
+        <div class="noteSec">
+            <h4>N.B.</h4>
+            <p>-1 (One) Year Warranty from the date of delivery except Keyboard, Mouse, Power Supply, Speaker, Adapter, Card reader, Ribbon, Toner & Printer Head.</p>
+            <p>-No warranty for any kinds of physical & Electrical damage ore burn. Warranty for all sold products will be void, if the Sticker are removed.</p>
+        </div>
+    </section>
+</body>
+</html>
